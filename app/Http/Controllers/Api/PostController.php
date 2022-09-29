@@ -61,7 +61,7 @@ class PostController extends Controller
         //     'result' => $post,
         // ]);
 
-        $post = Post::find($id);
+        $post = Post::with('user', 'tags')->find($id);
         if ($post){
             return response()->json([
                 'response' => true,

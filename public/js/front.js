@@ -1975,7 +1975,6 @@ __webpack_require__.r(__webpack_exports__);
       var regex = /(?:https?):\/\/(\w+:?\w*)?(\S+)(:\d+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
 
       if (!regex.test(string)) {
-        alert("Please enter valid URL.");
         return false;
       } else {
         return true;
@@ -2064,7 +2063,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      post: {}
+      post: {
+        user: ''
+      }
     };
   },
   methods: {
@@ -2253,7 +2254,7 @@ var render = function render() {
   }, [_c("img", {
     staticClass: "card-img-top",
     attrs: {
-      src: _vm.isValidUrl(_vm.post.post_image) ? _vm.post.post_image : "storage/" + _vm.post.post_image,
+      src: _vm.isValidUrl(_vm.post.post_image) ? _vm.post.post_image : "http://127.0.0.1:8000/storage/" + _vm.post.post_image,
       alt: _vm.post.title
     }
   }), _vm._v(" "), _c("div", {
