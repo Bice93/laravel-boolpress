@@ -7,6 +7,7 @@ import AboutPage from './pages/AboutPage.vue';
 import ContactsPage from './pages/ContactsPage.vue';
 import HomePage from './pages/HomePage.vue';
 import NewsPage from './pages/NewsPage.vue';
+import SinglePostPage from './pages/SinglePostPage.vue';
 
 //Creare una nuova istanza di vueRouter
 const router = new VueRouter({
@@ -31,6 +32,11 @@ const router = new VueRouter({
             path: '/news',
             name: 'news',
             component: NewsPage
+        },
+        {
+            path: '/posts/:id',
+            name: 'postShow',
+            component: SinglePostPage
         },
     ],
 });
