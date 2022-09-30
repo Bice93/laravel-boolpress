@@ -7,7 +7,7 @@
         class="card-img-top" :alt="post.title" />
       <div class="card-body">
         <h5 class="card-title">
-          <router-link :to="'posts/' + post.id">
+          <router-link :to="{ name : 'postShow', params : { id : post.id} }">
           {{ post.title }}
           </router-link>
           </h5>
