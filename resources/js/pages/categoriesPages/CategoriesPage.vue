@@ -6,7 +6,7 @@
       </div>
       <div v-else class="col-12">
       <h1>Categories:</h1>
-      <div class="row row-cols-1 row-cols-md-3">
+      <div>
         <CategoryCard
           v-for="category in categories"
           :key="category.id"
