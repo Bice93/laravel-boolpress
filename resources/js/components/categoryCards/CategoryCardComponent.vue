@@ -1,7 +1,7 @@
 <template>
   <div class="rounded-lg text-center jumbotron jumbotron-fluid" :style="'background-color:' + cardCategory.color">
     <div class="container">
-      <h1><router-link to=""> {{ cardCategory.name.toUpperCase() }} </router-link></h1>
+      <h1><router-link :to="'/categories/' + cardCategory.id"> {{ cardCategory.name.toUpperCase() }} </router-link></h1>
     </div>
   </div>
 </template>

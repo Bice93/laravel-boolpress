@@ -9,6 +9,7 @@ import HomePage from './pages/HomePage.vue';
 import NewsPage from './pages/NewsPage.vue';
 import SinglePostPage from './pages/SinglePostPage.vue';
 import CategoriesPage from './pages/categoriesPages/CategoriesPage.vue';
+import CategoryPostsListPage from './pages/categoriesPages/CategoryPostsListPage.vue';
 
 //Creare una nuova istanza di vueRouter
 const router = new VueRouter({
@@ -43,6 +44,11 @@ const router = new VueRouter({
             path: '/categories',
             name: 'categories',
             component: CategoriesPage
+        },
+        {
+            path: '/categories/:id',
+            name: 'categoryPostsList',
+            component: CategoryPostsListPage
         },
     ],
 });

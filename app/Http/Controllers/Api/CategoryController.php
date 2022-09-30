@@ -15,7 +15,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::with('posts.user')->get();
+        $categories = Category::with('posts.user', 'posts.tags')->get();
 
         return response()->json([
             'response' => true,
@@ -53,7 +53,7 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        $category = Category::with('posts.user')->find($id);
+        $category = Category::with('posts.user', 'posts.tags')->find($id);
         if ($category){
             return response()->json([
                 'response' => true,
