@@ -11,6 +11,7 @@ import SinglePostPage from './pages/SinglePostPage.vue';
 import CategoriesPage from './pages/categoriesPages/CategoriesPage.vue';
 import CategoryPostsListPage from './pages/categoriesPages/CategoryPostsListPage.vue';
 import TagsPage from './pages/tagsPages/TagsPage.vue';
+import TagPostsListPage from './pages/tagsPages/TagPostsListPage.vue';
 import PageNotFound from './pages/errors/PageNotFound.vue';
 
 //Creare una nuova istanza di vueRouter
@@ -56,6 +57,11 @@ const router = new VueRouter({
             path: '/tags',
             name: 'tags',
             component: TagsPage
+        },
+        {
+            path: '/tags/:id',
+            name: 'tagPostsList',
+            component: TagPostsListPage
         },
         {
             path: '*',

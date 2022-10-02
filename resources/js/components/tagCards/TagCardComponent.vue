@@ -1,6 +1,6 @@
 <template>
     <div class="card-tag">
-        <h5><router-link to=""> #{{ cardTag.name.toUpperCase() }} </router-link></h5>
+        <h5><router-link :to="'/tags/' + cardTag.id"> #{{ cardTag.name.toUpperCase() }} </router-link></h5>
     </div>
 </template>
 
